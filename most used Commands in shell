@@ -1,0 +1,13 @@
+# commands
+
+vi Resource_Tracker.sh  to cretae the file
+ ./Resource_Tracker.sh   to run the file
+
+ aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId' to print the clear
+sudo apt install awscli to install cli in ec2
+ aws configure  to configure
+ ssh -i "shellpem.pem" ubuntu@ec2-54-234-152-167.compute-1.amazonaws.com  to connect the ubuntu
+
+
+
+
