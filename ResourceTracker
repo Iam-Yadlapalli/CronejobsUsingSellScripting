@@ -1,0 +1,41 @@
+#!/bin/bash
+
+
+#######################
+
+#author :Hari
+
+#date:13feb
+
+set -x
+
+#version1
+
+#this script will report the aws resources
+
+# aws ec2
+#aws s3
+# aws lambda
+# aws IAM
+
+
+# to list the ec2 instance
+
+echo " print the EC2 instances"
+aws ec2 describe-instances
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
+
+# to list the s3 buckets
+
+echo "print thr s3 buckets"
+aws s3 ls
+
+# to list the lambda services
+
+echo "print thr lambda services"
+aws lambda list-functions
+
+# to list the IAM users
+
+echo "print the iam users"
+aws iam list-users
